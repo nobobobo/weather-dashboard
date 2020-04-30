@@ -10,6 +10,8 @@
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
         integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
     <link rel="stylesheet" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
 
 </head>
 
@@ -24,31 +26,36 @@
             <form class="form-inline active-purple-4 mr-auto">
                 <input class="form-control form-control-md mr-3 w-75" type="text" placeholder="Search"
                     aria-label="Search">
-                <i class="fas fa-search mr-3" aria-hidden="true"></i>
+                <i class="fas fa-search mr-3" id="search" aria-hidden="true"></i>
             </form>
             <br>
-            <ul class="list-group">
+            <ul class="list-group" id="cityList">
+                <!--
                 <li class="list-group-item">Cras justo odio</li>
                 <li class="list-group-item">Dapibus ac facilisis in</li>
                 <li class="list-group-item">Morbi leo risus</li>
                 <li class="list-group-item">Porta ac consectetur ac</li>
                 <li class="list-group-item">Vestibulum at eros</li>
+                -->
             </ul>
         </div>
 
         <div id="content">
             <div class="row border m-3 rounded">
-                <div class="col-12">
+                <div class="col-12" id="forecast">
+                    <!--
                     <h1> Seattle (04/30, 2020) </h1>
                     <p> Temperature: </p>
                     <p> Humidity</p>
                     <p> Wind Speed</p>
                     <p> UV index</p>
+                    -->
                 </div>
             </div>
 
-            <div class="row border m-3 rounded">
+            <div class="row border m-3 rounded" id="fiveDayForecast">
                 <h2> 5-Day Forecast</h2>
+                <!--
                 <div class="weather-card">
                     <div class="border border-primary rounded m-3">Weather 1</div>
                 </div>
@@ -64,9 +71,11 @@
                 <div class="weather-card">
                     <div class="border border-primary rounded m-3">Weather 5</div>
                 </div>
+                -->
             </div>
         </div>
     </div>
+    <script src="script.js"></script>
 </body>
 
 </html>
