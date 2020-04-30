@@ -1,0 +1,20 @@
+.wrapper {
+  display: flex;
+  align-items: stretch;
+}
+
+#sidebar {
+  width: 30%;
+}
+
+#content {
+  width: 70%;
+}
+
+.weather-card{
+  width: 20%;
+}
+
+h2{
+  width: 100%;
+}

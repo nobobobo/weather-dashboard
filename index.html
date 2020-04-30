@@ -6,36 +6,67 @@
     <title>Weather Dashboard</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
         integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <link rel="icon" type="image/png" href="/icon.ico">
+    <link rel="icon" type="image/png" href="icon.ico">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+    <link rel="stylesheet" href="style.css">
+
 </head>
 
 <body>
-    <nav class="navbar navbar-light bg-light">
-        <span class="navbar-brand mb-0 h1 ml-auto mr-auto">Weather Dashboard</span>
+    <nav class="navbar navbar-light bg-primary">
+        <span class="navbar-brand mb-0 h1 ml-auto mr-auto font-weight-bold">Weather Dashboard</span>
     </nav>
-<div class="container">
-    <div class= "row">
-        <div class="col-4">
-            list of cities
+
+    <div class="wrapper">
+        <div id="sidebar" class="mr-3 p-3" style="background-color: #e3f2fd;">
+            <p class="font-weight-bold ml-1 my-0"> Search for City:</p>
+            <form class="form-inline active-purple-4 mr-auto">
+                <input class="form-control form-control-md mr-3 w-75" type="text" placeholder="Search"
+                    aria-label="Search">
+                <i class="fas fa-search mr-3" aria-hidden="true"></i>
+            </form>
+            <br>
+            <ul class="list-group">
+                <li class="list-group-item">Cras justo odio</li>
+                <li class="list-group-item">Dapibus ac facilisis in</li>
+                <li class="list-group-item">Morbi leo risus</li>
+                <li class="list-group-item">Porta ac consectetur ac</li>
+                <li class="list-group-item">Vestibulum at eros</li>
+            </ul>
         </div>
-        <div class="col-8">
-            <div class="row">
-                <div id= "city-info">
-                    here is city info
+
+        <div id="content">
+            <div class="row border m-3 rounded">
+                <div class="col-12">
+                    <h1> Seattle (04/30, 2020) </h1>
+                    <p> Temperature: </p>
+                    <p> Humidity</p>
+                    <p> Wind Speed</p>
+                    <p> UV index</p>
                 </div>
             </div>
-            <div class="row">
-                <div class="col-1"></div>
-                <div class="col-2"> Weather 1</div>
-                <div class="col-2"> Weather 2</div>
-                <div class="col-2"> Weather 3</div>
-                <div class="col-2"> Weather 4</div>
-                <div class="col-2"> Weather 5</div>
-                <div class="col-1"></div>
+
+            <div class="row border m-3 rounded">
+                <h2> 5-Day Forecast</h2>
+                <div class="weather-card">
+                    <div class="border border-primary rounded m-3">Weather 1</div>
+                </div>
+                <div class="weather-card">
+                    <div class="border border-primary rounded m-3">Weather 2</div>
+                </div>
+                <div class="weather-card">
+                    <div class="border border-primary rounded m-3">Weather 3</div>
+                </div>
+                <div class="weather-card">
+                    <div class="border border-primary rounded m-3">Weather 4</div>
+                </div>
+                <div class="weather-card">
+                    <div class="border border-primary rounded m-3">Weather 5</div>
+                </div>
             </div>
         </div>
     </div>
-</div>
 </body>
 
 </html>
