@@ -1,7 +1,11 @@
 // api key: 5cea1d9c8d9729e3deba8cb0ccf8f1d8
+let cityList = JSON.parse(localStorage.getItem("cityList"));
 
-let cityList = ["Seattle", "New York"];
-let city = cityList[0];
+if (cityList === null){
+    cityList = [];
+}
+
+let city ="";
 
 function renderCity() {
     $("#cityList").empty();
@@ -15,6 +19,8 @@ function renderCity() {
         $("#cityList").append(liElm);
     }
 }
+
+renderCity();
 
 function renderForecast() {
     $("#forecast").empty();
@@ -86,18 +92,29 @@ function renderFiveDay(){
 
 
 $("#search").click(function () {
+
+    if ($("#input").val() === ""){
+        return;
+    }
     city = $("#input").val();
     cityList.push(city);
+    localStorage.setItem("cityList",JSON.stringify(cityList));
     renderCity();
     renderForecast();
     renderFiveDay();
+
+
 })
 
 $("#input").keypress(function (event) {
     if (event.which == 13) {
+        if ($("#input").val() === ""){
+            return;
+        }
         event.preventDefault();
         city = $(this).val();
         cityList.push(city);
+        localStorage.setItem("cityList",JSON.stringify(cityList));
         renderCity();
         renderForecast();
         renderFiveDay();
