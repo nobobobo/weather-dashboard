@@ -57,7 +57,7 @@ function renderFiveDay(){
     
         for (let i=0; i<5; i++){
             let cardElm = $("<div>").addClass("weather-card flex-fill");
-            let cardData = $("<div>").addClass("border text-white bg-primary rounded m-3");
+            let cardData = $("<div>").addClass("border text-white rounded m-3 bg-primary");
 
             let date = new Date(forecastData.list[8*i+7].dt * 1000);
             console.log(date);
