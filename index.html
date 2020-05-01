@@ -24,7 +24,7 @@
         <div id="sidebar" class="mr-3 p-3" style="background-color: #e3f2fd;">
             <p class="font-weight-bold ml-1 my-0"> Search for City:</p>
             <form class="form-inline active-purple-4 mr-auto">
-                <input class="form-control form-control-md mr-3 w-75" type="text" placeholder="Search"
+                <input id = "input" class="form-control form-control-md mr-3 w-75" type="text" placeholder="Search"
                     aria-label="Search">
                 <i class="fas fa-search mr-3" id="search" aria-hidden="true"></i>
             </form>
@@ -41,7 +41,7 @@
         </div>
 
         <div id="content">
-            <div class="row border m-3 rounded">
+            <div class="row border m-3 rounded" id= "forecastContainer">
                 <div class="col-12" id="forecast">
                     <!--
                     <h1> Seattle (04/30, 2020) </h1>
@@ -53,8 +53,8 @@
                 </div>
             </div>
 
-            <div class="row border m-3 rounded">
-                <div class="col-12" id="5dForecast">
+            <div class="row border m-3 rounded" id = "fiveDayContainer">
+                <div class="col-12" id="fiveDayForecast">
 
                 </div>
                 
